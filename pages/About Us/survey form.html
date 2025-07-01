@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Survey Form</title>
+    <meta name="author" content ="Swoyam Maharjan">
+    <meta name="description" content="Survey Form">
+    <meta name="keyword" content="information about the users, and their opinions">
+    <style>
+        body{
+            background-color: antiquewhite;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .form-control{
+            text-align: left;
+            margin-bottom: 10px;
+            color: bisque;
+        }
+        form{
+            margin: 50px auto;
+            padding: 30px 30px;
+            max-width: 450px;
+            background-color: #212121;
+        }
+        .form-control input,
+        .form-control select,
+        .form-control textarea{
+            width: 95%;
+        }
+        .form-control input[type="radio"]{
+            display:inline-block;
+            width: auto;
+        }
+        button{
+            display: block;
+            width: 100%;
+            padding: 10px 10px;
+            background-color: bisque;
+        }
+      </style>
+    <script src="js/external.js"></script>
+
+</head>
+<body>
+    <script>alert("Welcome to the Survey Form.");</script>
+    <h1 style="text-align: center;text-decoration-line:underline;">Kyma Survey Form</h1>
+    <form name="SurveyForm" style="text-align: center;">
+        <fieldset>
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">Name</label>
+        <input type="text" name="Name" placeholder="Enter Your Name">
+        </div> 
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">Email</label>
+        <input type="text" name="Email" placeholder="Enter Your Email">
+        </div> 
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">Age</label>
+        <input type="text" name="Age" placeholder="Enter Your Age">
+        </div> 
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px" >Who are you ?</label>
+        <select name="Who are you ?">
+            <option>Student</option>
+            <option>Customer</option>
+            <option>Businessman</option>
+            <option>Intern</option>
+        </select>
+        </div> 
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">Your experience in Kyma.</label>
+            <select name="Your experience in Kyma">
+                <option>Good</option>
+                <option>Average</option>
+                <option>Bad</option>
+            </select>
+        </div> 
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">What do you think of our webpage ?</label>
+            <select name="What do you think of our webpage ?">
+                <option>Good</option>
+                <option>Average</option>
+                <option>Bad</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">What do you think of our products in sale ?</label>
+            <select name="What do you think of our products in sale ?">
+                <option>Good</option>
+                <option>Average</option>
+                <option>Bad</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">Would you recommend this webpage to others ?</label>
+            <select name="Would you recommend this webpage to others ?">
+                <option>Yes</option>
+                <option>Average</option>
+                <option>No</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">Do you think the webpage is authentic ?</label>
+            <select name="Do you think the webpage is authentic ?">
+                <option>Yes</option>
+                <option>Average</option>
+                <option>No</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">Which do you prefer more ?</label>
+            <select name="Which do you prefer more ?">
+                <option>Analog watches</option>
+                <option>Digital watches</option>
+                <option>Both</option>
+            </select>
+        </div>
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">What would you rate Kyma out of 10 ?</label>
+            <input type="radio" name="Choice">1
+            <input type="radio" name="Choice">2
+            <input type="radio" name="Choice">3
+            <input type="radio" name="Choice">4
+            <input type="radio" name="Choice">5
+            <input type="radio" name="Choice">6
+            <input type="radio" name="Choice">7
+            <input type="radio" name="Choice">8
+            <input type="radio" name="Choice">9
+            <input type="radio" name="Choice">10
+        </div>
+        <div class="form-control">
+            <label style="display: block;margin-bottom: 10px">Any Comments or Remarks.</label>
+        <textarea placeholder="Enter your remarks or message." name="Any Comments or Remarks"></textarea>
+        </div> 
+        <input type="submit" onClick="validateForm()">
+    </fieldset>
+    </form>
+</body>
+</html>

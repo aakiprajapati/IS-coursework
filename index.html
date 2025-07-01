@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<head>
+    <title>Home</title>
+    <meta name="author" content ="Aaki Prajapati">
+    <meta name="description" content="Home page">
+    <meta name="keyword" content="home, new products, perfect gift, elegant watches">
+    <!--linking external CSS which is used for styling multiple pages -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--internal CSS which is used for styling only this particular page-->
+        <style>
+
+          body{
+            overflow-x: hidden;                   /*lets the page to be fit perfectly in the screen without having to slide horizontally*/
+            margin: 0;
+          }
+
+          /*making class inorder to reuse the same styling for multiple tags*/
+          /*using flex to arrange the alignment*/ 
+
+          .navcontainer{
+             display: flex;                        /*this property creates a container allowing to arrange elements in a proper format, and automatically adjusts the size of the elements*/
+             flex-direction: row;                  /*this property allows the elements to be placed horizontally within the particular div*/
+             justify-content: space-between;       /*justify content defines how elements are aligned within the container. space between is used to align the elements with no spaces at the start and end*/
+             background-color: #212121;
+            }
+
+          .container2{
+          display: flex;                          
+          justify-content: space-around;           /*space-around is to align the elements with spaces at the start and end*/
+        } 
+          .divbg img{
+             transition: 0.3s ease;                /*to style in img included inside divbg, kept within this so that even after our cursor is removed, the zoom effect slowly zooms out. */
+          }
+          .divbg img:hover{
+             transform: scale(1.06);                /*transform is kept within hover so that the size increases only when we hover it */
+            }
+
+          /*making classes for the downloaded fonts*/
+
+            .kymafont{
+              font-family: logofont;
+              font-weight: bolder;
+              font-size: 45px;
+              color:  #9d8161;
+            }
+            .nfont{
+              font-family: navfont;
+              font-size: 19px;
+              text-decoration: none;
+            }
+            .nfont:hover{                /*encloses the content having nfont within a box(since it is enclosed in a table) of colour #9d8161 when hovered. */
+              background: #9d8161;
+              color: black;
+            }
+            .mottofont{
+              font-family: motto;
+              font-size: 22px;
+              color:#36454F;
+            }
+            .linefont{
+              font-family: bodyfont;
+              font-size: 25px;
+              color:black;
+            }
+            .hfont{
+              font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif ;
+              font-size: 25px;
+              color:#1c1c1b;
+              font-weight: bold;
+            }
+            .hifont{
+              font-family: bodyfont;
+              font-size: 25px;
+              color:#b0b0b0;
+            }
+            /*including other classes for styling*/
+           .divbg{
+            background-color: #212121;
+           }
+           .imgpadding
+           {
+            padding:20px;
+           }
+           .padding{
+              padding:5px;
+            }
+           .padding2{
+              padding-left: 65px; padding-right: 65px;
+           }
+           .paddingnav{
+            padding-top: 10px;
+           } 
+           .margintop{
+            padding-top: 40px;
+           }
+          
+        </style>
+</head>
+  <body>
+    <!--model-->
+    <!--position: absolute is used to display content over the main content-->
+    <div style="position:absolute;                  
+                display:flex;
+                justify-content: center;
+                align-items: center;              
+                width:100%;
+                height:100%;" 
+          id="remove">
+      <!--by default the flex-direction is row, so justify content is used to align elements horizontally
+                                                   align-items used to align elements in the opposite axis, i.e vertically -->
+    <div class="divbg linefont"
+         style="display:flex;
+         flex-direction:column;
+         justify-content: center;
+         align-items: center;
+         padding:20px" >
+        <textarea id="username" rows="10" cols="20" placeholder="Name" ></textarea>
+        <button onclick="enter()">Enter</button>
+    </div>
+    </div>
+
+    <header>
+        <!--company name and navigation bar-->
+          <div class="navcontainer">
+            <div style="display: flex;
+                        align-items: center;" 
+                 class="paddingnav">  
+                   <h1 class="kymafont padding2">kyma</h1>
+            </div>
+          <div style="display: flex;
+                      align-items: center;" 
+               class="paddingnav">
+                    <p id="displayy" class="hifont"></p>
+          </div>
+           <div style="display: flex;
+                       align-items: center;" 
+                class="paddingnav">                   <!-- to align the links the center horizontally within the div-->
+              <nav>        
+                <table class="padding2">              <!--aligning the nav bar using table tag-->
+                  <tr>
+                   <th>
+                    <a href="index.html" class="nfont padding">Home</a>
+                  </th>
+                  <th>
+                    <a href="pages/products.html" class="nfont padding" >Products</a>
+                  </th>
+                  <th>
+                    <a href="pages/blog.html" class="nfont padding">Blog</a>
+                  </th>
+                  <th>
+                    <a href="pages/About Us/about us.html" class="nfont padding">About Us</a>
+                  </th>
+                  <th> 
+                    <a href="pages/research.html" class="nfont padding">Research</a>
+                  </th>
+                </tr>
+               </table>
+              </nav>
+          </div>
+        </div>
+      </header>
+
+        <!--displaying the poster image-->
+        <!--linking the photo into the products page-->
+        <a href="pages/products.html">
+          <img src="images/poster.png" alt="main product" width="100%" height="500px" style="padding-top:15px;"><br>
+        </a>
+          <h2 class="mottofont" align="center" style="font-size: 25px;"><b>Kyma: Timeless Elegance in Every Wave</b></h2>
+          <p class="linefont" align="center">Waves and flow of time, always endless and rhythmic. Presenting you THE watch collection, that never goes out of style.</p>
+      
+       <!-- displaying latest collections  -->
+       <p class="hfont padding2 margintop">DISCOVER OUR LATEST COLLECTIONS:</p>
+       <!-- using tables for alignment -->
+       <table align="center">
+        <tr>
+          <td>
+            <p class="linefont" align="center">Julias</p>
+            <div class="divbg">
+              <a href="pages/products.html">
+                <img src="images/julias.jpg" height="250" width="350" class="imgpadding">
+              </a>
+            </div>
+          </td>
+          <td rowspan="2">              <!-- rowspan 2 allows this particular element of the table to occupy two rows -->
+            <p class="linefont" align="center">Tank Louis Cartier</p>
+            <div class="divbg">
+              <a href="pages/products.html">
+                <img src="images/bandwatch.jpg" alt="smartwatch" height="500" width="350" class="imgpadding">
+              </a>
+            </div>
+          </td>
+          <td>
+            <p class="linefont" align="center">Omega</p>
+            <div class="divbg">
+              <a href="pages/products.html">
+                <img src="images/omega2.jpg" height="250" width="350" class="imgpadding">
+              </a>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <p class="linefont" align="center">Gogoey TD5</p>
+            <div class="divbg">
+              <a href="pages/products.html">
+                <img src="images/gogoeytd5.jpg" alt="smartwatch" height="250" width="350" class="imgpadding">
+              </a>
+            </div>
+          </td>
+          <td>
+            <p class="linefont" align="center">Gedi</p>
+            <div class="divbg">
+              <a href="pages/products.html">
+                <img src="images/gedi.jpg" alt="smartwatch" height="250" width="350" class="imgpadding">
+              </a>
+            </div>
+          </td>
+        </tr>
+        </table>
+      
+      <!-- aligning watches for occasions-->
+       
+        <p class="hfont padding2 margintop">BE READY FOR ALL OCCASIONS:</p>
+          <table style="margin-left: 170px;">
+            <tr>
+              <td>
+                <div class="linefont padding" align="center">Seiko Quartz</div>
+              </td>
+              <td></td>
+              <td>
+                <div class="linefont padding" align="center">Kai</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div  class="imgpadding divbg">
+                  <a href="pages/products.html">
+                    <img src="images/dresswatch.jpg" alt="dresswatch" height="300" width="300">
+                  </a>
+                </div>
+              </td>
+              <td>
+                <p align="center" class="mottofont"
+                   style="padding-left: 40px; padding-right: 40px;">Dress Watch</p>
+              </td>
+              <td>
+                <div  class="imgpadding divbg">
+                  <a href="pages/products.html">
+                    <img src="images/dress watch 2.jpg" alt="dresswatch" height="300" width="300">
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="linefont padding" align="center">Innova</div>
+              </td>
+              <td></td>
+              <td>
+                <div class="linefont padding" align="center">Noir</div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="imgpadding divbg">
+                  <a href="pages/products.html">
+                    <img src="images/smartwatch.png" alt="smartwatch" height="300" width="300">
+                  </a>
+                </div>
+              </td>
+              <td>
+                <p align="center" class="mottofont"
+                   style="padding-left: 40px; padding-right: 40px;">Smart Watch</p>
+              </td>
+              <td>
+                <div  class="imgpadding divbg">
+                  <a href="pages/products.html">
+                    <img src="images/smart watch 2.jpg" alt="everydaywatch" height="300" width="300">
+                  </a>
+                </div>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <div class="linefont padding" align="center">Casio Quartz</div>
+              </td>
+              <td></td>
+              <td>
+                <div class="linefont padding" align="center">Omega Seamaster</div>
+              </td>
+              
+            </tr>
+            <tr>
+              <td>
+                <div  class="imgpadding divbg">
+                  <a href="pages/products.html">
+                    <img src="images/everydaywatch.jpg" alt="everydaywatch" height="300" width="300">
+                  </a>
+                </div>
+              </td>
+              <td>
+              <p align="center" class="mottofont"
+                 style="padding-left: 40px; padding-right: 40px;">Your Everyday<br>go-to Watch</p>
+              </td>
+              <td>
+                <div  class="imgpadding divbg">
+                  <a href="pages/products.html">
+                    <img src="images/Omega Watch.jpg" alt="everydaywatch" height="300" width="300">
+                  </a>
+                </div>
+              </td>
+            </tr>
+      </table>
+
+      <!--aligning gifts-->
+
+      <p class="hfont padding2 margintop">AND THE PERFECT GIFT:</p>
+
+      <!--aligning collection type-->
+      <div class="container2">
+        <div class="linefont">Casio Original Retro Vintage</div>
+        <div class="linefont">Nirvana Pearl Watch </div>
+        <div class="linefont">Cartier Tank Must Watch</div>
+      </div>
+
+      <!--aligning images-->
+      <div class="container2">
+        <div class="divbg">
+            <a href="pages/products.html">
+              <img src="images/giftmen.png" alt="giftmen" height="300" width="300" class="imgpadding">
+            </a>
+        </div>
+        <div class="divbg">
+            <a href="pages/products.html">
+              <img src="images/gitwomen.jpg" alt="giftwomen" height="300" width="300" class="imgpadding">
+            </a>
+        </div>
+        <div class="divbg">
+            <a href="pages/products.html">
+              <img src="images/giftunisex.jpg" alt="giftunisex" height="300" width="300" class="imgpadding">
+            </a>
+        </div>
+      </div>
+
+        <!--aligning names with images-->
+        <div class="container2">
+          <div class="mottofont padding" >Men's</div>
+          <div class="mottofont padding">Women's</div>
+          <div class="mottofont padding">Unisex</div>
+        </div>
+          <div class="margintop">
+          </div>
+          <!--footer section-->  
+        <footer class="footercontainer">
+          <div>
+          <div style="display: flex;                       
+                      flex-direction: row;                  
+                      justify-content: space-around;">
+              <div>
+                <p class="footer" style="font-size:28px;" align="center">
+                          <b>Crafted for<br>Every Moment</b>
+                </p>
+              </div>
+              <div  style="display:flex;
+                           justify-content: center; 
+                           flex-direction: column;">
+                <p  class="footer"
+                    style="font-size:20px;"
+                    align="center"> Kathmandu, Nepal <br>kymawatches@gmail.com <br>9868564672
+                </p>
+              </div>
+              <div>
+                <p  class="footer"
+                    style="font-size:25px;"
+                    align="center"><b>Other locations:</b>
+                </p>
+                <p class="footer"
+                   style="font-size:20px;"
+                   align="center">Pokhara<br>Hetauda<br>Chitwan</p>
+              </div>
+              <div>
+                <p  class="footer"
+                    style="font-size:25px;"
+                    align="center"><b>Follow Us:</b>
+                </p>
+                <div style="display:flex;
+                            flex-direction: row; gap: 10px;">
+                  <a href="https://www.instagram.com/" target="_blank">
+                    <img src="images/instagram.png" height="40px" width="40px">
+                  <a href="https://web.facebook.com/?_rdc=1&_rdr#" target="_blank">
+                    <img src="images/fb.png " height="40px" width="40px">
+                  <a href="https://www.linkedin.com/" target="_blank"> 
+                    <img src="images/linkedin.png" height="40px" width="40px">
+                </div>
+              </div>
+            </div>
+              <p class="footer"
+              style="font-size:15px;
+                     padding-bottom: 10px;"
+             align="center">&copy Kyma Watches. All rights reserved.</p> 
+          </div>
+        </footer>
+    <script>
+      function enter(){
+          var element=document.getElementById("username");                //gets element entered by the user in textarea having id=username
+          document.getElementById("displayy").innerHTML ="Welcome, "+element.value;   //displays the name stored in variable element in the p tag having id=display
+          document.getElementById("remove").style.display="none";         //used to remove the text area after name is entered 
+        }
+    </script>
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+

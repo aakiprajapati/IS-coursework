@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document</title>
+    <!-- meta tags -->
+    <meta name="author" content="Sabal Bhandari" />
+    <meta name="description" content="Blog Page" />
+    <meta name="keywords" content="impacts,watches,blog" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <style>
+      /* for the whole page */
+      * {
+        color: #4b3621;
+        box-sizing: border-box;
+      }
+      body{
+            overflow-x: hidden;                   /*lets the page to be fit perfectly in the screen without having to slide horizontally*/
+            margin: 0;
+          }
+      /* Navbar */
+      .navcontainer {
+        display: flex; /*this property creates a container allowing to arrange elements in a proper format, and automatically adjusts the size of the elements*/
+        justify-content: space-between; /* to align the elements with no spaces at the start and end*/
+        background-color: #212121;
+      }
+
+      .paddingnav {
+        padding: 10px;
+      }
+      .padding {
+        padding: 10px;
+      }
+      .padding2{
+        padding-left: 65px;
+        padding-right: 65px;
+      }
+      .kymafont {
+        font-family: logofont;
+        font-weight: bolder;
+        font-size: 45px;
+        color: #9d8161;
+      }
+      .nfont{
+        font-family: navfont;
+        font-size: 19px;
+        text-decoration: none;
+        color: #9d8161;
+      }
+      .nfont:hover{
+        background-color: #9d8161;
+        color: black;
+      }
+      .linefont {
+        font-family: bodyfont;
+        font-size: 25px;
+        color: black;
+      }
+      .hfont {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+          "Lucida Sans", Arial, sans-serif;
+        font-size: 20px;
+        color: #1c1c1b;
+      }
+      .nfont {
+        font-family: navfont;
+        font-size: 19px;
+      }
+      .padding {
+        padding: 5px;
+      }
+      .margintop{
+            padding-top: 40px;
+           }
+          
+      /* Style for banner section below nav */
+      .bannerContent {
+        /* border: 1px solid red; */
+        width: 620px;
+        height: 340px;
+        background-color: rgb(253, 253, 253);
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .banner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 340px;
+        background: #fdfdfd;
+      }
+      .bannerImage {
+        background-image: url(../images/Banner.jpg);
+        width: 60%;
+        background-size: cover;
+        background-position: center;
+        height: 340px;
+      }
+
+      .bannerContent h1 {
+        font-size: 48px;
+        font-family: bodyfont;
+        font-weight: 200;
+        margin-bottom: 30px;
+      }
+
+      .bannerContent p {
+        font-size: 20.8px;
+        width: 400px;
+        font-family: bodyfont;
+      }
+
+      /* Explore now button in the banner section */
+      .bannerButtons {
+        display: flex;
+        gap: 16px;
+        margin-top: 60px;
+      }
+
+      .bannerButtons input {
+        padding: 6px;
+        border-radius: 6px;
+        border: 1px solid #4b3621;
+        background-color: tan;
+        cursor: pointer;
+        transition: 0.1s ease;
+      }
+
+      .bannerButtons input:hover {
+        background-color: rgb(199, 166, 123);
+      }
+
+      /* Portion just below banner section  */
+      .secondPortion {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 40px;
+        margin: 40px 0;
+      }
+
+      .secondPortion .smartWatch {
+        height: 468px;
+        width: 609px;
+        background-image: url(../images/smartwatch.png);
+        background-size: cover;
+        border-radius: 34px;
+      }
+
+      .secondPortion .secondBannerContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .secondPortion .secondBannerContent p {
+        width: 560px;
+        font-size: 20.8px;
+      }
+
+      .secondPortion .secondBannerContent h1 {
+        font-size: 35px;
+        text-align: center;
+        font-family: bodyfont;
+        font-weight: 200;
+      }
+
+      /* This portion represents the row of watch topics below second portion */
+      .thirdPortion {
+        display: flex;
+        flex-direction: column;
+        margin: 40px 0;
+        position: relative;
+      }
+      .thirdPortion p {
+        background: #f8f8e8;
+        font-size: 20.8px;
+        margin: 0;
+        border-radius: 0 0 10px 10px;
+        padding: 5px 10px;
+        width: 304px;
+        height: 50px;
+      }
+
+      .thirdPortion h1 {
+        text-align: center;
+        border-radius: 20px;
+        font-size: 36.8px;
+        font-family: bodyfont;
+        font-weight: 200;
+      }
+
+      .thirdPortion .watchCollection {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 130px;
+      }
+
+      /* This is for the watch images in the rows */
+      .firstWatch .watch {
+        background-image: url(../images/mechanicalWatch.jpg);
+        cursor: pointer;
+      }
+
+      .secondWatch .watch {
+        background-image: url(../images/image2.jpg);
+        cursor: pointer;
+      }
+
+      .thirdWatch .watch {
+        background-image: url(../images/image3.jpg);
+        cursor: pointer;
+      }
+      .watchCollection p {
+        font-family: bodyfont;
+      }
+      .fourthWatch .watch {
+        background-image: url(../images/image4.jpg);
+        cursor: pointer;
+      }
+      .fifthWatch .watch {
+        background-image: url(../images/image5.jpg);
+        cursor: pointer;
+      }
+      .sixthWatch .watch {
+        background-image: url(../images/image6.jpg);
+        cursor: pointer;
+      }
+      .watch {
+        height: 413px;
+        width: 324px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px 10px 10px 10px;
+      }
+
+      .watches:hover {
+        transform: scale(1.1);
+        transition: 0.2s ease-in;
+      }
+      /* This is footer section */
+      .footer {
+        font-family: "Trebuchet MS", "Lucida Sans Unicode", Arial, sans-serif;
+        color: #b0b0b0;
+      }
+      .footer b {
+        color: #b0b0b0;
+      }
+
+      /* popup design when user clicks on the images in the third portion*/
+      .firstWatch-popup,
+      .secondWatch-popup,
+      .thirdWatch-popup,
+      .fourthWatch-popup,
+      .fifthWatch-popup,
+      .sixthWatch-popup {
+        width: 50%;
+        height: 80%;
+        position: fixed;
+        top: 10%;
+        left: 25%;
+        background: #f8f8e8;
+        box-shadow: 1px 2px 20px -4px black;
+        border-radius: 10px;
+        display: none;
+        flex-direction: column;
+        gap: 16px;
+        padding: 32px 32px;
+        font-family: bodyfont;
+        z-index: 100;
+        font-size: 20px;
+      }
+
+      /* Close button when the popup appears */
+      .close-popup {
+        padding: 15px 290px;
+        border-radius: 6px;
+        border: 1px solid #4b3621;
+        background-color: tan;
+        cursor: pointer;
+        position: absolute;
+        bottom: 20px;
+        margin: auto;
+      }
+
+      .close-popup:hover {
+        background-color: rgb(199, 166, 123);
+      }
+
+      /* title of popup */
+      h2 {
+        text-align: center;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="navcontainer">
+        <div style="display: flex; align-items: center" class="paddingnav">
+          <h1 class="kymafont padding2">kyma</h1>
+        </div>
+        <div style="display: flex; align-items: center" class="paddingnav">
+          <!-- to align the links the center horizontally within the div-->
+          <nav>
+            <table class="padding2">
+              <!--aligning the nav bar using table tag-->
+              <tr>
+                <th>
+                  <a href="../index.html" class="nfont padding home">Home</a>
+                </th>
+                <th>
+                  <a href="products.html" class="nfont padding"
+                    >Products</a
+                  >
+                </th>
+                <th>
+                  <a href="blog.html" class="nfont padding blog">Blog</a>
+                </th>
+                <th>
+                  <a href="About Us/about us.html" class="nfont padding"
+                    >About Us</a
+                  >
+                </th>
+                <th>
+                  <a href="research.html" class="nfont padding"
+                    >Research</a
+                  >
+                </th>
+              </tr>
+            </table>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <!-- Banner section -->
+    <section class="banner">
+      <div class="bannerContent">
+        <div>
+          <h1>Discover the Art of Timekeeping.</h1>
+          <p>
+            Stay updated with the latest trends, tips, and insights in the world
+            of watches.
+          </p>
+
+          <div class="bannerButtons">
+            <a href="products.html"
+              ><input type="button" value="Explore Now" href="www.google.com"
+            /></a>
+          </div>
+        </div>
+      </div>
+      <div class="bannerImage"></div>
+    </section>
+
+    <!-- Portion below banner -->
+    <section class="secondPortion">
+      <div class="smartWatch"></div>
+      <div class="secondBannerContent">
+        <h1>Impact of Technology on watch industry</h1>
+        <p>
+          The watchmaking industry has totally changed with the development of
+          technology, especially with the appearance of smartwatches.
+          Traditional timekeeping devices, which had their value determined by
+          craftsmanship and luxury, started to be threatened by wearables that
+          introduced fitness tracking, health monitoring, and app connectivity.
+          Brands like Apple and Samsung conquer this segment, appealing to
+          technology-savvy consumers who are looking for multifunctional
+          devices. Meanwhile, the old players have survived by introducing
+          hybrid models that integrate the best of analog design with modern
+          technology. E-commerce and digital marketing have also changed the way
+          watches are sold and marketed, turning this industry more dynamic and
+          far-reaching for a great number of people.
+        </p>
+      </div>
+    </section>
+
+    <!-- Rows of watch topics -->
+    <section class="thirdPortion">
+      <!-- 1st Row of the thirdPortion -->
+      <h1>Watch Designs and Technology</h1>
+      <div class="watchCollection">
+        <div class="firstWatch watches">
+          <div class="watch"></div>
+          <p style="padding: 12px 0">From mechanical watches to smartwatches</p>
+        </div>
+
+        <!-- first watch popup  -->
+        <div class="firstWatch-popup">
+          <h2>From mechanical watches to smartwatches</h2>
+          <span>
+            From the intricate mechanic watches of former times to smart ones in
+            use today, there is captured several centuries in just one field.
+            Early mechanical timepieces-meat watches-paved the path forward with
+            spring-crank gears until the 1970s made way for their quartz parts
+            inside at cheap charges. These turned into a further
+            development-alarm and calculative functions-on offer from the
+            now-digital variation that had since led directly toward modern
+            smart watches, capable as health trackers and communication center
+            helpers, aside AI assistants. Despite the dominance of smart
+            technology, mechanical watches are still treasured for their art and
+            heritage. In the future, a combination of tradition and innovation
+            could offer timepieces that combine elegance with modern
+            functionality.
+          </span>
+          <button class="close-popup">Close</button>
+        </div>
+
+        <div class="secondWatch watches">
+          <div class="watch"></div>
+          <p style="padding: 12px 0">
+            Innovation in materials and energy source
+          </p>
+        </div>
+
+        <!-- second watch popup  -->
+        <div class="secondWatch-popup">
+          <h2>Innovation in materials and energy source</h2>
+          <span>
+            Durability, efficiency, and sustainability have been improved by the
+            use of new materials and sources of energy. From traditional
+            stainless steel and precious metals, innovation brought
+            lightweight-yet-robust materials like titanium, ceramic, and carbon
+            fiber, improving comfort and strength. The conventional glass is
+            replaced by sapphire crystal for superior scratch resistance. In
+            energy sources, mechanical watches evolved from manual winding to
+            self-winding movements, while quartz watches revolutionized
+            timekeeping with battery-powered precision. Today, solar-powered and
+            kinetic energy watches reduce reliance on disposable batteries, and
+            smartwatches boast rechargeable lithium-ion batteries with wireless
+            charging capabilities. These ensure that watches remain both
+            functional and ecologically conscious in an era of rapid
+            technological change.
+          </span>
+          <button class="close-popup">Close</button>
+        </div>
+
+        <div class="thirdWatch watches">
+          <div class="watch"></div>
+          <p style="padding: 12px 0">Use of AI in Modern watches</p>
+        </div>
+      </div>
+
+      <!-- third watch popup  -->
+      <div class="thirdWatch-popup">
+        <h2>Use of AI in Modern watches</h2>
+        <span>
+          AI has transformed modern watches from mere time-keeping gadgets to
+          intelligent personal assistants. Modern smartwatches boast AI-powered
+          health monitoring, such as heart rate, sleeping patterns, and activity
+          levels, to make personalized fitness recommendations. Smart voice
+          assistants, such as Siri, Google Assistant, and Alexa, further make
+          the user interface hands-free, wherein sending messages, setting
+          reminders, or checking the weather is as easy as saying a few words.
+          AI-powered predictive analytics work out the optimization of battery
+          life, while machine learning algorithms make for a much-enhanced user
+          experience with wearables in habit and preference adaptation.
+          Continuing betterment lets AI in wearables bring convenience,
+          efficiency, and health-conscious drive into day-to-day living,
+          bridging the gap between technology and human health.
+        </span>
+        <button class="close-popup">Close</button>
+      </div>
+
+      <!-- second row of thirdPortion -->
+      <h1>Technological Innovations in Watch Sales</h1>
+      <div class="watchCollection">
+        <div class="fourthWatch watches">
+          <div class="watch"></div>
+          <p style="padding: 12px 0">AR in watch shopping</p>
+        </div>
+
+        <!-- fourth watch popup  -->
+        <div class="fourthWatch-popup">
+          <h2>AR in watch shopping</h2>
+          <span>
+            AR will revolutionize watch buying by virtually trying them on
+            before making a purchase. Using different AR-enabled applications
+            and web tools, one can see how different watch models look on their
+            wrists in real time using their smartphone cameras. This technology
+            enhances convenience, eliminates the need to visit stores
+            physically, and helps buyers make more informed decisions. AR also
+            lets brands interactively show watch details, materials, and
+            functionalities, thus creating a more immersive shopping experience.
+            As the technology behind AR continues to advance, it makes shopping
+            for watches even more entertaining, personalized, and accessible to
+            people around the world.
+          </span>
+          <button class="close-popup">Close</button>
+        </div>
+
+        <div class="fifthWatch watches">
+          <div class="watch"></div>
+          <p style="padding: 12px 0">E-commerce in watch industry</p>
+        </div>
+
+        <!-- fifth watch popup  -->
+        <div class="fifthWatch-popup">
+          <h2>E-commerce in watch industry</h2>
+          <span>
+            E-commerce has influenced the watchmaking industry, making both
+            luxury and everyday-wear timepieces more accessible to people around
+            the world. Online resources offer the possibility for companies to
+            get their commodities across to target audiences with lots of
+            information for better descriptions and high-resolution photographs
+            among which also customer comments may be given. Virtual fittings,
+            secure means of paying for the purchase, and suggestions complete
+            the feeling for the buyer at home. This has further been enabled
+            through direct-to-consumer sales on marketplaces like Amazon,
+            through direct brand websites, and online boutiques, all of which
+            reduce their dependence on physical stores. As digital shopping
+            keeps growing, e-commerce is shaping the watch industry times ahead
+            by combining convenience, variety, and innovative customer
+            engagement.
+          </span>
+          <button class="close-popup">Close</button>
+        </div>
+
+        <div class="sixthWatch watches">
+          <div class="watch"></div>
+          <p style="padding: 12px 0">
+            AI recommendations in Watch shopping sites
+          </p>
+        </div>
+
+        <!-- sixth watch popup  -->
+        <div class="sixthWatch-popup">
+          <h2>AI recommendations in Watch shopping sites</h2>
+          <span>
+            AI-powered recommendations will change watch shopping through
+            personalized suggestions based on user preferences, browsing
+            history, and purchase behavior. E-commerce platforms make use of
+            machine learning algorithms in analyzing customer data to suggest
+            watches that match the style, budget, and interest of a particular
+            individual. AI-driven chatbots are there to help shoppers with
+            queries and offer real-time personalized advice, hence enhancing the
+            buying experience. Besides, visual recognition technology helps
+            users find similar designs based on uploaded images. By refining
+            search results and offering smart recommendations, AI makes watch
+            shopping more efficient, engaging, and customized, ensuring
+            customers find the perfect timepiece with ease.
+          </span>
+          <button class="close-popup">Close</button>
+        </div>
+      </div>
+    </section>
+
+     <!--footer section-->  
+     <footer class="footercontainer">
+      <div>
+      <div style="display: flex;                       
+                  flex-direction: row;                  
+                  justify-content: space-around;">
+          <div>
+            <p class="footer" style="font-size:28px;" align="center">
+                      <b>Crafted for<br>Every Moment</b>
+            </p>
+          </div>
+          <div  style="display:flex;
+                       justify-content: center; 
+                       flex-direction: column;">
+            <p  class="footer"
+                style="font-size:20px;"
+                align="center"> Kathmandu, Nepal <br>kymawatches@gmail.com <br>9868564672
+            </p>
+          </div>
+          <div>
+            <p  class="footer"
+                style="font-size:25px;"
+                align="center"><b>Other locations:</b>
+            </p>
+            <p class="footer"
+               style="font-size:20px;"
+               align="center">Pokhara<br>Hetauda<br>Chitwan</p>
+          </div>
+          <div>
+            <p  class="footer"
+                style="font-size:25px;"
+                align="center"><b>Follow Us:</b>
+            </p>
+            <div style="display:flex;
+                        flex-direction: row; gap: 10px;">
+              <a href="https://www.instagram.com/" target="_blank">
+                <img src="../images/instagram.png" height="40px" width="40px">
+              <a href="https://web.facebook.com/?_rdc=1&_rdr#" target="_blank">
+                <img src="../images/fb.png " height="40px" width="40px">
+              <a href="https://www.linkedin.com/" target="_blank"> 
+                <img src="../images/linkedin.png" height="40px" width="40px">
+            </div>
+          </div>
+        </div>
+          <p class="footer"
+          style="font-size:15px;
+                 padding-bottom: 10px;"
+         align="center">&copy Kyma Watches. All rights reserved.</p> 
+      </div>
+    </footer>
+
+    <script>
+      // Function to open popup
+      function openPopup(popupClass) {
+        document.querySelector(popupClass).style.display = "flex";
+      }
+
+      // Function to close popup
+      function closePopup(popupClass) {
+        document.querySelector(popupClass).style.display = "none";
+      }
+      document
+        .querySelector(".firstWatch")
+        .addEventListener("click", function () {
+          openPopup(".firstWatch-popup");
+        });
+
+      document
+        .querySelector(".secondWatch")
+        .addEventListener("click", function () {
+          openPopup(".secondWatch-popup");
+        });
+
+      document
+        .querySelector(".thirdWatch")
+        .addEventListener("click", function () {
+          openPopup(".thirdWatch-popup");
+        });
+
+      // Event listeners for each watch popup
+      document
+        .querySelector(".fourthWatch")
+        .addEventListener("click", function () {
+          openPopup(".fourthWatch-popup");
+        });
+
+      document
+        .querySelector(".fifthWatch")
+        .addEventListener("click", function () {
+          openPopup(".fifthWatch-popup");
+        });
+
+      document
+        .querySelector(".sixthWatch")
+        .addEventListener("click", function () {
+          openPopup(".sixthWatch-popup");
+        });
+
+      // Close button event listeners
+      document.querySelectorAll(".close-popup").forEach((button) => {
+        button.addEventListener("click", function () {
+          this.parentElement.style.display = "none";
+        });
+      });
+    </script>
+  </body>
+</html>

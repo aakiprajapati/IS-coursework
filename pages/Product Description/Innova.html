@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Innova Smart-Watch</title>
+    <meta name="author" content ="Simran Bist">
+    <meta name="description" content="Innova Smart-Watch">
+    <meta name="keyword" content="descripton, price, features of watch">
+     <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            justify-content: center; 
+            align-items: center;
+            display: flex; /*This property allows the elements to adjust horizontally*/ 
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f3f3f3, #e7e7e7); /*this property allows transition between two or more specified colours*/
+             height: 100vh; /*vh (viewport height) property allows the visible area of browser window
+                            100vh fills the entire screen height*/
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px; /* Prevents it from getting too wide on large screens */
+            height: 600px;
+            display: flex; 
+            flex-wrap: wrap; /*allows the items to wrap to the next row if they don't fit*/
+            background: white;
+            border-radius: 15px; /*create rounded corners*/
+            overflow: hidden; /*Any content which will overflow outside the box will remain hidden*/
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); /*adds shadow effect to a container*/
+        }
+
+        .container img {
+            flex: 1;
+            height: 100%;
+            min-width: 500px; /*minimum width should be 500px not less than that*/
+            background-size: cover; /*The image will scale to fill the container’s width and height without affecting its original ratio*/
+            background-position: center; 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            object-fit: cover; /*fits the entire image within the height and width we've given without affecting it's aspect ratio*/
+        }
+
+        .description {
+            flex: 1; /*makes the item expand equally to fill up the available space in a flex container*/
+            padding: 40px; 
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 15px; 
+        }
+
+        .original-price {
+            text-decoration: line-through; /*crosses out the text*/
+            color: gray;
+            font-size: 22px;
+        }
+
+        .discounted-price {
+            color: #c0392b;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .Add-to-Cart {
+            font-size: 18px;
+            border-radius: 8px;
+            padding: 12px 24px;
+            background: #000;
+            color: white;
+            border: none; /*gives no border*/
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s; /*makes the element smoothly animate its transformation and background color changes over 0.3 seconds when hovered*/
+        }
+
+        .Add-to-Cart:hover {
+            transform: scale(1.1); /*used to increase the size of the button by 10% when hovered*/
+            background: #444;
+        }
+
+        .features li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+            .container img {
+                width: 100%;
+            }
+
+            .description {
+                padding: 20px;
+            }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <img src="../../images/innova.jpg" alt="Omega watch">
+        <div class="description">
+            <h1>Innova Smart Watch</h1>
+            <div class="price-container">
+                <p class="original-price">$1000</p>
+                <p class="discounted-price">$899</p>
+            </div>
+            <button class="Add-to-Cart" onclick="placeOrder()">Add to Cart</button>
+            <script>
+                function placeOrder() {
+                  alert("Your order has been placed. Thank you!");
+                }
+              </script>
+            <h2>Description</h2>
+            <p>Innova Smarwatch with all kinds of functions that will help you control your day to day. It has steps, distance and calories measurement, heart rate control, blood pressure and oxygen saturation.</p>
+            <h3>Product Features:</h3>
+            <ul class="features">
+                <li><strong>Measurement:</strong> Steps, Distance, Calories</li>
+                <li><strong>Heart rate:</strong> Yes</li>
+                <li><strong>Sleep Monitoring:</strong> Yes</li>
+                <li><strong>Oxygen Saturation:</strong> Yes</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

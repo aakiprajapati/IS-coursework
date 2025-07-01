@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <title>Product Page</title>
+      <meta name="author" content ="Simran Bist">
+      <meta name="description" content="Products page">
+      <meta name="keyword" content="products, prices and description">
+      <link rel="stylesheet" href="../css/style.css">
+    <style>
+      /* Navigation bar styling */
+          .container{
+          display: flex;   /*This property allows the elements to adjust horizontally*/                       
+          justify-content: space-between;  /* to align the elements with spaces at the start and end*/
+          background-color: #212121;
+            } 
+
+          .kymafont{
+              font-family: logofont;
+              font-weight: bolder; /*This property increases the thickness of text or font*/
+              font-size: 45px;
+              color:  #9d8161;
+            }
+            .nfont{
+              text-decoration: none; /*This property removes the existing underline from a link */
+              font-family: navfont;
+              font-size: 19px;
+              color: #b0b0b0;
+            }
+            .nfont:hover{
+              background: #9d8161; 
+              color: black;
+            }
+           .padding{
+              padding:5px; /*It gives spacing inside the box*/
+            }
+           .padding2{
+              padding-left: 65px;
+              padding-right: 65px;
+           }
+           .paddingnav{
+            padding-top: 10px;
+           } 
+
+        /* styling for the whole page */
+      body {
+        font-family: 'Trebuchet MS';
+        margin: 0; /*It gives space between elements*/
+        box-sizing: border-box; /* Ensures padding and borders are included in the element's total width/height */
+        overflow-x: hidden;
+      }
+
+      /* Banner styling */
+      .banner-container {
+        text-align: center;  
+        padding-bottom: 50px;
+      }
+
+      .banner {
+        height: 400px;
+        width: 100%;
+        position: relative;
+        overflow: hidden;  /*Any content which will overflow outside the box will remain hidden*/
+      }
+      .banner-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*fits the entire image within the height and width we've given without affecting it's aspect ratio*/
+      }
+      .banner-text {
+        position: absolute;
+        top: 20%;
+        left: 1%;
+        color: white;
+        font-weight: 800;
+      }
+      /* Product Section */
+      .brands {
+        display: flex; /*This property allows the elements to adjust horizontally*/ 
+        justify-content: center; 
+       
+      }
+
+      .watch-section {
+        width: 400px;
+        height: 400px;
+        position: relative;
+        overflow: hidden; /*Any content which will overflow outside the box will remain hidden*/
+        padding-top: 20px;
+        cursor: pointer;
+        margin-right: 50px;
+        border-radius: 5px; 
+      }
+
+      .watch-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*fits the entire image within the height and width we've given without affecting it's aspect ratio*/
+        transition: transform 0.8s ease; /*applies a smooth scaling effect over 0.8 seconds with and ease-in-out animation*/
+      }
+
+      .watch-img:hover {
+        transform: scale(1.03); /*Increase the image size when hovered*/
+      }
+
+      .watch-name {
+        position: absolute;
+        text-align: center;
+        bottom: 10px;
+        left: 0;
+        width: 100%;
+        color: white;
+        font-family: "Trebuchet MS";
+        font-size: 24px;
+        font-family: "Trebuchet MS";
+        font-weight: 800;
+      }
+
+      h1.heading {
+        text-align: center;
+      }
+      .margintop{
+            padding-top: 40px;
+           }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!--company name and navigation bar-->
+      <div class="container">
+          <div style="display: flex;
+          align-items: center;" 
+          class="paddingnav">  
+          <h1 class="kymafont padding2">kyma</h1>
+        </div>
+         <div style="display: flex;  
+                     align-items: center;" 
+                     class="paddingnav">      
+            <nav>        
+              <table class="padding2">                            
+                <tr>
+                 <th>
+                  <a href="../index.html" class="nfont padding">Home</a>
+                </th>
+                <th>
+                  <a href="products.html" class="nfont padding" >Products</a>
+                </th>
+            <th>
+            <a href="./blog.html" class="nfont padding">Blog</a>
+            </th>
+            <th>
+            <a href="About Us/about us.html" class="nfont padding">About Us</a>
+            </th>
+            <th> 
+            <a href="./research.html" class="nfont padding">Research</a>
+            </th>
+            </tr>
+            </table>
+            </nav>
+        </div>
+      </div>
+  </header>
+  <!-- Banner section -->
+    <div class="banner-container">
+      <div class="banner">
+        <img src="../images/banner3.webp" width="100%" height="400px" />
+        <div class="banner-text">
+          <h1 style="color: white">
+            Every Watch Tells a Story<br />-Start Yours Today.
+          </h1>
+          <h3 style="color: white">
+            Discover timeless Elegance with our Vintage Watches.
+          </h3>
+        </div>
+      </div>
+
+      <h1 class="heading">Discover our Products</h1>
+
+      <!-- Product section -->
+      <div style="padding-left:60px;">
+        <div class="brands">
+      <!-- Watch 1 -->
+      <div class="watch-section">
+      <a href="./Product description/Rolex.html" target="_blank">
+      <img class="watch-img" src="../images/rolex1.webp" alt="rolexwatch"></a>
+      <h1 class="watch-name">Rolex</h1>
+       </div>
+
+       <!-- Watch 2 -->
+        <div class="watch-section">
+          <a href="./Product description/Omega.html" target="_blank">
+          <img class="watch-img" src="../images/omega.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Omega</h1>
+        </div>
+
+         <!-- Watch 3 -->
+        <div class="watch-section">
+          <a href="./Product description/TankLouis.html" target="_blank">
+          <img class="watch-img" src="../images/bandwatch.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Tank Louis Cartier</h1>
+        </div>
+    </div>
+        <div class="brands">
+         <!-- Watch 4 -->
+        <div class="watch-section">
+          <a href="./Product description/PatekPhilippe.html" target="_blank">
+          <img class="watch-img" src="../images/PatekPhilippe.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Patek Philippe</h1>
+        </div>
+
+         <!-- Watch 5 -->
+        <div class="watch-section">
+          <a href="./Product description/Casio.html" target="_blank">
+          <img class="watch-img" src="../images/smartsilver.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Casio LA671WA-7</h1>
+        </div>
+
+         <!-- Watch 6 -->
+        <div class="watch-section">
+          <a href="./Product description/Vacheron.html" target="_blank">
+          <img class="watch-img" src="../images/VacheronConstantin.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Vacheron Constantin</h1>
+        </div>
+     </div>
+     <div class="brands">
+         <!-- Watch 7 -->
+        <div class="watch-section">
+          <a href="./Product description/CasioQuartz.html" target="_blank">
+          <img class="watch-img" src="../images/everydaywatch.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Casio Quarrtz</h1>
+        </div>
+
+         <!-- Watch 8 -->
+        <div class="watch-section">
+          <a href="./Product description/Breitling.html" target="_blank">
+          <img class="watch-img" src="../images/Breitling.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Breitling</h1>
+        </div>
+
+         <!-- Watch 9 -->
+        <div class="watch-section">
+          <a href="./Product description/Time-only.html" target="_blank">
+          <img class="watch-img" src="../images/Time-Only Longines.jpeg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Time-Only Logines</h1>
+        </div>
+    </div>
+    <div class="brands">
+         <!-- Watch 10 -->
+        <div class="watch-section">
+          <a href="./Product description/Audemars.html" target="_blank">
+          <img class="watch-img" src="../images/AudemarsPiguet.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Audemars Piguet</h1>
+        </div>
+
+         <!-- Watch 11 -->
+        <div class="watch-section">
+          <a href="./Product description/Innova.html" target="_blank">
+          <img class="watch-img" src="../images/innova.jpg" alt="rolexwatch"></a>
+          <h1 class="watch-name">Innova Smart-Watch</h1>
+        </div>
+
+         <!-- Watch 12 -->
+        <div class="watch-section">
+          <a href="./Product description/CasioVintage.html" target="_blank">
+          <img class="watch-img" src="../images/giftmen.png" alt="rolexwatch">
+        </a>
+          <h1 class="watch-name">Casio Original Retro Vintage</h1>
+        </div>
+    </div>
+      </div>
+    </div>
+    <div class="margintop">
+    </div>
+     <!-- Footer section -->
+
+    <footer class="footercontainer">
+        <div>
+        <div style="display: flex;                       
+                    flex-direction: row;                  
+                    justify-content: space-around;">
+            <div>
+              <p class="footer" style="font-size:28px;" align="center">
+                        <b>Crafted for<br>Every Moment</b>
+              </p>
+            </div>
+            <div  style="display:flex;
+                         justify-content: center; 
+                         flex-direction: column;">
+              <p  class="footer"
+                  style="font-size:20px;"
+                  align="center"> Kathmandu, Nepal <br>kymawatches@gmail.com <br>9868564672
+              </p>
+            </div>
+            <div>
+              <p  class="footer"
+                  style="font-size:25px;"
+                  align="center"><b>Other locations:</b>
+              </p>
+              <p class="footer"
+                 style="font-size:20px;"
+                 align="center">Pokhara<br>Hetauda<br>Chitwan</p>
+            </div>
+            <div>
+              <p  class="footer"
+                  style="font-size:25px;"
+                  align="center"><b>Follow Us:</b>
+              </p>
+              <div style="display:flex;
+                          flex-direction: row; gap: 10px;">
+                <a href="https://www.instagram.com/" target="_blank">
+                  <img src="../images/instagram.png" height="40px" width="40px">
+                <a href="https://web.facebook.com/?_rdc=1&_rdr#" target="_blank">
+                  <img src="../images/fb.png " height="40px" width="40px">
+                <a href="https://www.linkedin.com/" target="_blank"> 
+                  <img src="../images/linkedin.png" height="40px" width="40px">
+              </div>
+            </div>
+          </div>
+            <p class="footer"
+            style="font-size:15px;
+                   padding-bottom: 10px;"
+           align="center">&copy Kyma Watches. All rights reserved.</p> 
+        </div>
+      </footer>
+  </body>
+</html>

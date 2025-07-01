@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vacheron Constantin</title>
+    <meta name="author" content ="Simran Bist">
+    <meta name="description" content="Vacheron Constantin Watch">
+    <meta name="keyword" content="descripton, price, features of watch">
+    <style>  
+        body {
+            font-family: 'Poppins', sans-serif;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f3f3f3, #e7e7e7);
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            height: auto;
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+
+        .container img {
+            flex: 1;
+            min-width: 500px;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            object-fit: cover;
+        }
+
+        .description {
+            flex: 1;
+            padding: 40px;
+        }
+
+        .price-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .original-price {
+            text-decoration: line-through;
+            color: gray;
+            font-size: 22px;
+        }
+
+        .discounted-price {
+            color: #c0392b;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .Add-to-Cart {
+            font-size: 18px;
+            border-radius: 8px;
+            padding: 12px 24px;
+            background: #000;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+
+        .Add-to-Cart:hover {
+            transform: scale(1.1);
+            background: #444;
+        }
+
+        .features li {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+
+        h1, h2, h3 {
+            color: #333;
+        }
+
+            .container img {
+                width: 100%;
+            }
+
+            .description {
+                padding: 20px;
+            }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div class="container">
+        <img src="../../images/VacheronConstantin.jpg" alt="Omega watch">
+        <div class="description">
+            <h1>Vacheron Constantin</h1>
+            <div class="price-container">
+                <p class="original-price">$53,000</p>
+                <p class="discounted-price">$49,645</p>
+            </div>
+            <button class="Add-to-Cart" onclick="placeOrder()">Add to Cart</button>
+            <script>
+                function placeOrder() {
+                  alert("Your order has been placed. Thank you!");
+                }
+              </script>
+            <h2>Description</h2>
+            <p>Crafted with a 42mm stainless steel case water resistant, this model features a black step dial, anodized aluminum bezel with the legendary “Dot Over 90,” and a classic asymmetrical design inspired by the 4th generation Speedmaster worn on the moon.</p>
+            <h3>Product Features:</h3>
+            <ul class="features">
+                <li><strong>Case material:</strong> Silver</li>
+                <li><strong>Strap Color:</strong> Black</li>
+                <li><strong>Case Size:</strong> 41mm</li>
+                <li><strong>Power Reserve:</strong> 72 hours</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

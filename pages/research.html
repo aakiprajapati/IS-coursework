@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Research</title>
+            <meta name="author" content ="Aaki Prajapati, Swoyam Maharjan, Simran Bist">
+            <meta name="description" content="Research page">
+            <meta name="keyword" content="references, researches, screenshots, comparison">
+    <!--linking external CSS which is used for styling multiple pages -->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--internal CSS which is used for styling only this particular page-->
+    <style>
+        body{
+            overflow: x hidden; 
+            margin: 0;
+        }
+        /*making class inorder to reuse the same styling for multiple tags*/
+        /*using flex to arrange the alignment*/
+        .navcontainer{
+             display: flex;                        /*this property creates a container allowing to arrange elements in a proper format, and automatically adjusts the size of the elements*/
+             flex-direction: row;                  /*this property allows the elements to be placed horizontally within the particular div*/
+             justify-content: space-between;       /* to align the elements with no spaces at the start and end*/
+             background-color: #212121;
+            }
+            .container2{
+              display: flex;                          
+              justify-content: space-around;           /* to align the elements with spaces at the start and end*/
+          } 
+          
+        /*making classes for the downloaded fonts*/
+        .mottofont{
+              font-family: motto;
+              font-size: 22px;
+              color:#36454F;
+            }
+        .kymafont{
+              font-family: logofont;
+              font-weight: bolder;
+              font-size: 45px;
+              color:  #9d8161;
+            }
+        .linefont{
+              font-family: bodyfont;
+              font-size: 18px;
+              color:black;
+              padding:20px
+            }
+        .nfont{
+              font-family: navfont;
+              font-size: 19px;
+              text-decoration: none;
+            }
+            .nfont:hover{                /*encloses the content having nfont within a box(since it is enclosed in a table) of colour #9d8161 when hovered. */
+              background: #9d8161;
+              color: black;
+            }
+        /*including other classes for styling*/
+        .padding2{
+            padding-left: 65px; padding-right: 65px;
+          }
+        .divbg{
+            background-color:#212121;
+           }
+        .divbg img{
+             transition: 0.3s ease;                /*to style in img included inside divbg, kept within this so that even after our cursor is removed, the zoom effect slowly zooms out. */
+          }
+        .divbg img:hover{
+             transform: scale(1.06);                /*transform is kept within hover so that the size increases only when we hover it */
+            }
+        .imgpadding
+           {
+            padding:20px;
+           }
+        .paddingnav{
+            padding-top: 10px;
+         }   
+        .padding{
+              padding: 5px;
+            }
+            .margintop{
+            padding-top: 40px;
+           }
+    </style>
+</head>
+<body>
+    <header>
+       <!--company name and navigation bar-->
+       <div class="navcontainer">
+        <div style="display: flex;
+        align-items: center;" 
+        class="paddingnav">  
+        <h1 class="kymafont padding2">kyma</h1>
+      </div>
+       <div style="display: flex;
+                   align-items: center;" 
+                   class="paddingnav">      <!-- to align the links the center horizontally within the div-->
+          <nav>        
+            <table class="padding2">                            <!--aligning the nav bar using table tag-->
+              <tr>
+               <th>
+                <a href="../index.html" class="nfont padding">Home</a>
+              </th>
+              <th>
+                <a href="products.html" class="nfont padding" >Products</a>
+              </th>
+          <th>
+          <a href="blog.html" class="nfont padding">Blog</a>
+          </th>
+          <th>
+          <a href="About Us/about us.html" class="nfont padding">About Us</a>
+          </th>
+          <th> 
+          <a href="research.html" class="nfont padding">Research</a>
+          </th>
+          </tr>
+          </table>
+          </nav>
+      </div>
+    </div>
+  </header>
+  <!-- Home page -->
+  <p class="mottofont padding2">Gift Section </p>
+        <!-- aligning references -->
+         <!--first reference-->
+         <div class="container2">
+            <div class="divbg">
+                <a href="https://www.piaget.com/ww-en" target="_blank">
+                <img src="../images/reference1.jpg" alt="giftsection" width="600px" height="300px" class="imgpadding">
+              </a>
+              </div>
+            <div class="divbg">
+              <a href="../index.html" target="_blank">
+                <img src="../images/giftreference.jpg" alt="owngift" width="600px" height="300px" class="imgpadding">
+              </a>
+              </div>
+            </div>
+            <!--explanation-->
+                <p class="linefont" align="center">The reference for the gift section was taken from the Piaget 150 website. While they included 
+                    gift sections for men, women, and by colours, our website has its sections for men, women and for both. Our website also consists
+                    of background for images while the reference website does not. We have also included watch names, that could be a good idea to be
+                    gifted.</p>
+                </p>
+            <!--second reference-->
+            <p class="mottofont padding2" style="margin-top: -15px;">Motto Section </p>
+            <div class="container2">
+                <div class="divbg">
+                  <a href="https://www.piaget.com/ww-en" target="_blank">
+                    <img src="../images/reference2.jpg" alt="mottosection" width="600px" height="300px" class="imgpadding">
+                  </a>
+                  </div>
+                <div class="divbg">
+                  <a href="../index.html" target="_blank">
+                    <img src="../images/mottoreference.jpg" alt="ownmotto" width="600px" height="300px" class="imgpadding">
+                  </a>
+                  </div>
+                </div>
+            <!--explanation-->
+                <p class="linefont" align="center">The reference for the gift section was taken from the Piaget 150 website. While they included 
+                    a small message for the users for the upcoming festivals, our website consists of the relation between the business name and 
+                    watches as well as our motto. 
+                </p>
+                
+              <!-- About Us page -->
+              <!-- first reference -->
+              <p class="mottofont padding2" style="margin-top: -15px;">Nav Bar</p>
+              <div class="container2">
+                <div class="divbg">
+                    <a href="https://www.titannepal.com/" target="_blank">
+                    <img src="../images/reference.png" alt="abovenav" width="600px" height="100px" class="imgpadding">
+                  </a>
+                  </div>
+                <div class="divbg">
+                  <a href="About Us/about us.html" target="_blank">
+                    <img src="../images/copy.jpg" alt="mynav" width="600px" height="100px" class="imgpadding">
+                  </a>
+                  </div>
+                </div>
+                <!--explanation-->
+                    <p class="linefont" align="center">The reference for the above nav bar section was taken from the titan watch nepal's website.
+                       While they had a scrolling attribute which led to a different banner our website only dispalys one banner and doesn't have any animation 
+                       attribute. We included the above nav section because it showcases the advantage a customer could get if he/she purchases
+                       the product.
+                    </p>
+                    </p><br>
+                <!--second reference-->
+                <p class="mottofont padding2" style="margin-top: -15px;">Structure of Form</p>
+                <div class="container2">
+                    <div class="divbg">
+                      <a href="https://cloudinary.com/homepage" target="_blank">
+                        <img src="../images/abusreference2.png" alt="form" width="600px" height="500px" class="imgpadding">
+                      </a>
+                      </div>   
+                    <div class="divbg">
+                      <a href="About Us/survey form.html" target="_blank">
+                        <img src="../images/copy2.jpg" alt="ownform" width="600px" height="500px" class="imgpadding">
+                      </a>
+                    </div>
+                    </div>
+                <!--explanation-->
+                    <p class="linefont" align="center">The reference for the survey form was taken from the webpage called cloudinary. The reference taken 
+                       was just the basic structure of the form and not the overall structure as you can see from the image depicted above. The survey form we created
+                       asks the user related to their experience of exploration of our website. While the questions might also be similar it is to be noted that
+                       they are not copied.
+                    </p>
+                  <!-- third reference -->
+                  <p class="mottofont padding2" style="margin-top: -15px;">Product Section</p>
+                     <!--first reference-->
+                     <div class="container2">
+                        <div class="divbg">
+                            <a href="https://www.melbournewatch.com.au/collections/flinders" target="_blank">
+                            <img src="../images/Melbourne Watch.png" alt="giftsection" width="600px" height="300px" class="imgpadding">
+                          </a>
+                          </div>
+                        <div class="divbg">
+                            <a href="products.html" target="_blank">
+                            <img src="../images/MyProductsPage.png" alt="owngift" width="600px" height="300px" class="imgpadding">
+                              </a>
+                          </div>
+                        </div>
+                        <!--explanation-->
+                            <p class="linefont" align="center">The design of the Product page was inspired by the Melbourne Watch Company Website.
+                               Melbourne Watch Company is known for its elegant and minimalist design, emphasizing luxury and sophistication, which
+                               perfectly fits our vintage and luxury watch collection. Using this reference, we created our own design using 
+                               different CSS properties and modified the product card design too. Using our creativity, we took the concepts and 
+                               techniques from this website and applied them to our own web page. 
+                            </p>
+             
+        </div>
+    </div>
+    <div class="margintop">
+    </div>
+    <!--footer section-->  
+  <footer class="footercontainer">
+    <div>
+    <div style="display: flex;                       
+                flex-direction: row;                  
+                justify-content: space-around;">
+        <div>
+          <p class="footer" style="font-size:28px;" align="center">
+                    <b>Crafted for<br>Every Moment</b>
+          </p>
+        </div>
+        <div  style="display:flex;
+                     justify-content: center; 
+                     flex-direction: column;">
+          <p  class="footer"
+              style="font-size:20px;"
+              align="center"> Kathmandu, Nepal <br>kymawatches@gmail.com <br>9868564672
+          </p>
+        </div>
+        <div>
+          <p  class="footer"
+              style="font-size:25px;"
+              align="center"><b>Other locations:</b>
+          </p>
+          <p class="footer"
+             style="font-size:20px;"
+             align="center">Pokhara<br>Hetauda<br>Chitwan</p>
+        </div>
+        <div>
+          <p  class="footer"
+              style="font-size:25px;"
+              align="center"><b>Follow Us:</b>
+          </p>
+          <div style="display:flex;
+                      flex-direction: row; gap: 10px;">
+            <a href="https://www.instagram.com/" target="_blank">
+              <img src="../images/instagram.png" height="40px" width="40px">
+            <a href="https://web.facebook.com/?_rdc=1&_rdr#" target="_blank">
+              <img src="../images/fb.png " height="40px" width="40px">
+            <a href="https://www.linkedin.com/" target="_blank"> 
+              <img src="../images/linkedin.png" height="40px" width="40px">
+          </div>
+        </div>
+      </div>
+        <p class="footer"
+        style="font-size:15px;
+               padding-bottom: 10px;"
+       align="center">&copy Kyma Watches. All rights reserved.</p> 
+    </div>
+  </footer>
+</body>
+</html>
+
+
